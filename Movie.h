@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIKit/UIKit.h"
 
 @interface Movie : NSObject
 
 @property (nonatomic) NSString *title;
-@property int year;
+@property (nonatomic)NSString *synopsis;
 
+//@property (nonatomic)UIImage *movieImage;
 
 @end

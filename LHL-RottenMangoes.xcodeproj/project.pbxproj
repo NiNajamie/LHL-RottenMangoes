@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		96650CF81CF4FCC700E9E8DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96650CF71CF4FCC700E9E8DD /* main.m */; };
 		96650CFB1CF4FCC700E9E8DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96650CFA1CF4FCC700E9E8DD /* AppDelegate.m */; };
-		96650CFE1CF4FCC700E9E8DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96650CFD1CF4FCC700E9E8DD /* ViewController.m */; };
 		96650D011CF4FCC700E9E8DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96650CFF1CF4FCC700E9E8DD /* Main.storyboard */; };
 		96650D031CF4FCC700E9E8DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96650D021CF4FCC700E9E8DD /* Assets.xcassets */; };
 		96650D061CF4FCC700E9E8DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96650D041CF4FCC700E9E8DD /* LaunchScreen.storyboard */; };
 		96650D121CF517DF00E9E8DD /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 96650D111CF517DF00E9E8DD /* Movie.m */; };
+		96D1A84B1CF6283500CCD1E6 /* MovieCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D1A84A1CF6283500CCD1E6 /* MovieCollectionViewController.m */; };
+		96D1A84E1CF64FA400CCD1E6 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D1A84D1CF64FA400CCD1E6 /* CollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +22,16 @@
 		96650CF71CF4FCC700E9E8DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96650CF91CF4FCC700E9E8DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96650CFA1CF4FCC700E9E8DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		96650CFC1CF4FCC700E9E8DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		96650CFD1CF4FCC700E9E8DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		96650D001CF4FCC700E9E8DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96650D021CF4FCC700E9E8DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96650D051CF4FCC700E9E8DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96650D071CF4FCC700E9E8DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96650D101CF517DF00E9E8DD /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = ../Movie.h; sourceTree = "<group>"; };
 		96650D111CF517DF00E9E8DD /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = ../Movie.m; sourceTree = "<group>"; };
+		96D1A8491CF6283500CCD1E6 /* MovieCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewController.h; sourceTree = "<group>"; };
+		96D1A84A1CF6283500CCD1E6 /* MovieCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewController.m; sourceTree = "<group>"; };
+		96D1A84C1CF64FA400CCD1E6 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		96D1A84D1CF64FA400CCD1E6 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +66,10 @@
 			children = (
 				96650CF91CF4FCC700E9E8DD /* AppDelegate.h */,
 				96650CFA1CF4FCC700E9E8DD /* AppDelegate.m */,
-				96650CFC1CF4FCC700E9E8DD /* ViewController.h */,
-				96650CFD1CF4FCC700E9E8DD /* ViewController.m */,
+				96D1A84C1CF64FA400CCD1E6 /* CollectionViewCell.h */,
+				96D1A84D1CF64FA400CCD1E6 /* CollectionViewCell.m */,
+				96D1A8491CF6283500CCD1E6 /* MovieCollectionViewController.h */,
+				96D1A84A1CF6283500CCD1E6 /* MovieCollectionViewController.m */,
 				96650D101CF517DF00E9E8DD /* Movie.h */,
 				96650D111CF517DF00E9E8DD /* Movie.m */,
 				96650CFF1CF4FCC700E9E8DD /* Main.storyboard */,
@@ -155,7 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96650CFE1CF4FCC700E9E8DD /* ViewController.m in Sources */,
+				96D1A84B1CF6283500CCD1E6 /* MovieCollectionViewController.m in Sources */,
+				96D1A84E1CF64FA400CCD1E6 /* CollectionViewCell.m in Sources */,
 				96650CFB1CF4FCC700E9E8DD /* AppDelegate.m in Sources */,
 				96650D121CF517DF00E9E8DD /* Movie.m in Sources */,
 				96650CF81CF4FCC700E9E8DD /* main.m in Sources */,
@@ -307,6 +313,7 @@
 				96650D0C1CF4FCC700E9E8DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
