@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96650CF81CF4FCC700E9E8DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96650CF71CF4FCC700E9E8DD /* main.m */; };
+		96650CFB1CF4FCC700E9E8DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96650CFA1CF4FCC700E9E8DD /* AppDelegate.m */; };
+		96650CFE1CF4FCC700E9E8DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96650CFD1CF4FCC700E9E8DD /* ViewController.m */; };
+		96650D011CF4FCC700E9E8DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96650CFF1CF4FCC700E9E8DD /* Main.storyboard */; };
+		96650D031CF4FCC700E9E8DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96650D021CF4FCC700E9E8DD /* Assets.xcassets */; };
+		96650D061CF4FCC700E9E8DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96650D041CF4FCC700E9E8DD /* LaunchScreen.storyboard */; };
+		96650D121CF517DF00E9E8DD /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 96650D111CF517DF00E9E8DD /* Movie.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96650CF31CF4FCC600E9E8DD /* LHL-RottenMangoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LHL-RottenMangoes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96650CF71CF4FCC700E9E8DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96650CF91CF4FCC700E9E8DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		96650CFA1CF4FCC700E9E8DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		96650CFC1CF4FCC700E9E8DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		96650CFD1CF4FCC700E9E8DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		96650D001CF4FCC700E9E8DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96650D021CF4FCC700E9E8DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96650D051CF4FCC700E9E8DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96650D071CF4FCC700E9E8DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96650D101CF517DF00E9E8DD /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = ../Movie.h; sourceTree = "<group>"; };
+		96650D111CF517DF00E9E8DD /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = ../Movie.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96650CF01CF4FCC600E9E8DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96650CEA1CF4FCC600E9E8DD = {
+			isa = PBXGroup;
+			children = (
+				96650CF51CF4FCC700E9E8DD /* LHL-RottenMangoes */,
+				96650CF41CF4FCC600E9E8DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96650CF41CF4FCC600E9E8DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96650CF31CF4FCC600E9E8DD /* LHL-RottenMangoes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96650CF51CF4FCC700E9E8DD /* LHL-RottenMangoes */ = {
+			isa = PBXGroup;
+			children = (
+				96650CF91CF4FCC700E9E8DD /* AppDelegate.h */,
+				96650CFA1CF4FCC700E9E8DD /* AppDelegate.m */,
+				96650CFC1CF4FCC700E9E8DD /* ViewController.h */,
+				96650CFD1CF4FCC700E9E8DD /* ViewController.m */,
+				96650D101CF517DF00E9E8DD /* Movie.h */,
+				96650D111CF517DF00E9E8DD /* Movie.m */,
+				96650CFF1CF4FCC700E9E8DD /* Main.storyboard */,
+				96650D021CF4FCC700E9E8DD /* Assets.xcassets */,
+				96650D041CF4FCC700E9E8DD /* LaunchScreen.storyboard */,
+				96650D071CF4FCC700E9E8DD /* Info.plist */,
+				96650CF61CF4FCC700E9E8DD /* Supporting Files */,
+			);
+			path = "LHL-RottenMangoes";
+			sourceTree = "<group>";
+		};
+		96650CF61CF4FCC700E9E8DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96650CF71CF4FCC700E9E8DD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96650CF21CF4FCC600E9E8DD /* LHL-RottenMangoes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96650D0A1CF4FCC700E9E8DD /* Build configuration list for PBXNativeTarget "LHL-RottenMangoes" */;
+			buildPhases = (
+				96650CEF1CF4FCC600E9E8DD /* Sources */,
+				96650CF01CF4FCC600E9E8DD /* Frameworks */,
+				96650CF11CF4FCC600E9E8DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LHL-RottenMangoes";
+			productName = "LHL-RottenMangoes";
+			productReference = 96650CF31CF4FCC600E9E8DD /* LHL-RottenMangoes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96650CEB1CF4FCC600E9E8DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Asuka Nakagawa";
+				TargetAttributes = {
+					96650CF21CF4FCC600E9E8DD = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6A3B9S8TK9;
+					};
+				};
+			};
+			buildConfigurationList = 96650CEE1CF4FCC600E9E8DD /* Build configuration list for PBXProject "LHL-RottenMangoes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96650CEA1CF4FCC600E9E8DD;
+			productRefGroup = 96650CF41CF4FCC600E9E8DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96650CF21CF4FCC600E9E8DD /* LHL-RottenMangoes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96650CF11CF4FCC600E9E8DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96650D061CF4FCC700E9E8DD /* LaunchScreen.storyboard in Resources */,
+				96650D031CF4FCC700E9E8DD /* Assets.xcassets in Resources */,
+				96650D011CF4FCC700E9E8DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96650CEF1CF4FCC600E9E8DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96650CFE1CF4FCC700E9E8DD /* ViewController.m in Sources */,
+				96650CFB1CF4FCC700E9E8DD /* AppDelegate.m in Sources */,
+				96650D121CF517DF00E9E8DD /* Movie.m in Sources */,
+				96650CF81CF4FCC700E9E8DD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96650CFF1CF4FCC700E9E8DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96650D001CF4FCC700E9E8DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96650D041CF4FCC700E9E8DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96650D051CF4FCC700E9E8DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96650D081CF4FCC700E9E8DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96650D091CF4FCC700E9E8DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96650D0B1CF4FCC700E9E8DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "LHL-RottenMangoes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "A.LHL-RottenMangoes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96650D0C1CF4FCC700E9E8DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "LHL-RottenMangoes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "A.LHL-RottenMangoes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96650CEE1CF4FCC600E9E8DD /* Build configuration list for PBXProject "LHL-RottenMangoes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96650D081CF4FCC700E9E8DD /* Debug */,
+				96650D091CF4FCC700E9E8DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96650D0A1CF4FCC700E9E8DD /* Build configuration list for PBXNativeTarget "LHL-RottenMangoes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96650D0B1CF4FCC700E9E8DD /* Debug */,
+				96650D0C1CF4FCC700E9E8DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96650CEB1CF4FCC600E9E8DD /* Project object */;
+}
