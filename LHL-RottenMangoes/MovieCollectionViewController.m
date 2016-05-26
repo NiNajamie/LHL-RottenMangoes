@@ -46,7 +46,6 @@ static NSString * const reuseIdentifier = @"Cell";
             NSMutableArray *movies = [NSMutableArray array];
             
             
-            
             // accessing moviesArray in movieDictionary to get Value of "title/synopsis/url"
             for (NSDictionary *movieDict in moviesArray) {
                 // inside of the moviesArray, there's postersDict
@@ -97,6 +96,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // 3.All of the the different tasks from NSURLSession start in a suspended state. Start the task here.
     [dataTask resume];
+    
 }
 
     

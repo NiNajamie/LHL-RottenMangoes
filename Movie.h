@@ -15,7 +15,11 @@
 @property (nonatomic) NSString *synopsis;
 
 @property (nonatomic) NSURL *url;
-
 @property (nonatomic) NSURL *thumbnail;
+
+@property (nonatomic) NSString *movieId;
+
+@property (nonatomic) NSURL *reviewURL;
+@property (nonatomic) NSURL *review;
 
 @end
