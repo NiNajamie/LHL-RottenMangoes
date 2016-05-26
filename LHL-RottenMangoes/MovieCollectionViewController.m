@@ -42,20 +42,25 @@ static NSString * const reuseIdentifier = @"Cell";
             // inside the jsonDictionary there's moviesArray
             NSArray *moviesArray = json[@"movies"];
             
-            // Create new EmptyArray holds movies
+            // Create new EmptyArrayMovies holds movie
             NSMutableArray *movies = [NSMutableArray array];
             
-            // accessing moviesArray in movieDictionary to get Value of "title"
+            
+            
+            // accessing moviesArray in movieDictionary to get Value of "title/synopsis/url"
             for (NSDictionary *movieDict in moviesArray) {
-                
+                // inside of the moviesArray, there's postersDict
+                NSDictionary *postersDict = movieDict[@"posters"];
                 // create newEmpty Movie object
                 Movie *movie = [[Movie alloc] init];
                 
                 // set stringTitle to title in the movieObject
                 movie.title = movieDict[@"title"];
-                
                 movie.synopsis = movieDict[@"synopsis"];
                 
+                // set url to url in the movieObject
+                movie.url = movieDict[@"url"];
+                movie.thumbnail = [NSURL URLWithString:postersDict[@"thumbnail"]];
 //                // convert stringYear to intValue
 //                movie.year = [movieDict[@"year"] intValue];
                 
@@ -66,9 +71,15 @@ static NSString * const reuseIdentifier = @"Cell";
 
                 // display movie's title & synopsis in console
                 NSLog(@"Title: %@, synopsis: %@", movie.title, movie.synopsis);
+    
             }
-            // save the data
+            // save the "data"
             self.movies = movies;
+            
+            // reloadData after Downloading "data" main_queque which is the blockOfCode for getting data
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.collectionView reloadData];
+            });
             
             //            Movie *secondMovie = movies[1];
             //            NSString *str = secondMovie.title;
@@ -113,6 +124,11 @@ static NSString * const reuseIdentifier = @"Cell";
     // match the title/year to title/year from Movies
     cell.titleLabel.text = dataEachCell.title;
     cell.synopsisLabel.text = dataEachCell.synopsis;
+    
+    // converting NSURL to thumbnailImage(UIImage)
+    NSData *data = [[NSData alloc] initWithContentsOfURL:dataEachCell.thumbnail];
+    cell.thumbnailImage.image = [UIImage imageWithData:data];
+  //  cell.thumbnailImage.image = dataEachCell.thumbnail;
     
     return cell;
 }

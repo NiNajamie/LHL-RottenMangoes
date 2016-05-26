@@ -12,8 +12,10 @@
 @interface Movie : NSObject
 
 @property (nonatomic) NSString *title;
-@property (nonatomic)NSString *synopsis;
+@property (nonatomic) NSString *synopsis;
 
-//@property (nonatomic)UIImage *movieImage;
+@property (nonatomic) NSURL *url;
+
+@property (nonatomic) NSURL *thumbnail;
 
 @end
