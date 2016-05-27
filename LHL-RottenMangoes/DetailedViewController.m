@@ -7,9 +7,14 @@
 //
 
 #import "DetailedViewController.h"
+#import "MovieCollectionViewController.h"
+#import "Review.h"
 #import "Movie.h"
 
 @interface DetailedViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (nonatomic) NSMutableArray *reviews;
 
 @end
 
@@ -18,48 +23,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // URL that can return review JSON // 3 items
-    NSString *reviewUrlString = @"http://api.rottentomatoes.com/api/public/v1.0/movies/771311818/reviews.json?apikey=j9fhnct2tp8wu2q9h75kanh9&page_limit=3";
+    // to display a review for a movie
+    self.detailLabel.text = self.movie.movieId;
+    
+    // URL that can return JSON // 3 reviewItems for each movie
+    // put movieID in the between /moviesArray and /reviews to access reviewPage
+    NSString *urlForReviewsString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movies/%@/reviews.json?apikey=j9fhnct2tp8wu2q9h75kanh9&page_limit=3", self.movie.movieId];
+    
+    //
+    NSURL *urlForReviews = [NSURL URLWithString:urlForReviewsString];
     
     NSURLSession *session1 = [NSURLSession sharedSession];
-    NSURLSessionTask *reviewTask = [session1 dataTaskWithURL:[NSURL URLWithString:reviewUrlString] completionHandler:^(NSData *data1, NSURLResponse *response1, NSError *error1) {
-        
-        // if we don't get any error
-        if (!error1) {
-            NSError *jsonError1 = nil;
+    NSURLSessionTask *reviewTask = [session1 dataTaskWithURL:[NSURL URLWithString:urlForReviewsString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (!error) {
+            NSError *jsonError = nil;
             
-            // reviewJson is a whole dictionary
-            NSDictionary *reviewJson = [NSJSONSerialization JSONObjectWithData:data1 options:0 error:&jsonError1];
-            // inside the reviewJsonDictionary there's reviewArray
+            // reviewJson is a whole dict
+            NSDictionary *reviewJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+            
+            // in the reviewJson we set a reviewArray
             NSArray *reviewArray = reviewJson[@"reviews"];
-            // Create new EmptyArrayReviews holds review
+            
+            // Create new EmptyArrayReviews holds reviewObjects
             NSMutableArray *reviews = [NSMutableArray array];
             
-            // accessing reviewsArray in reviewJsonDictionary to get Value of "url"
+            // accessing reviewsArray in reviewJsonDictionary to get Value of "reviews"
             for (NSDictionary *reviewDict in reviewArray) {
-                // inside of the reviewsArray, there's linksDict
-                NSDictionary *linksDict = reviewDict[@"reviews"];
-                // create newEmpty Movie object
-                Movie *review1 = [[Movie alloc] init];
+                // inside of the reviewsArray, there's dict
+                NSDictionary *dict = reviewDict[@"reviews"];
+                // create newEmpty Review object
+                Review *reviewObject = [[Review alloc] init];
                 
-                // set url to reviewURL in the movieObject
-                review1.reviewURL = reviewDict[@"reviews"];
-                review1.review = [NSURL URLWithString:linksDict[@"review"]];
-                
-                // Iterate through all the movies and create Movie object instances
+                // set stringCriticName to criticName in the reviewObject
+                reviewObject.criticName = reviewDict[@"criticName"];
+                reviewObject.quote = reviewDict[@"quote"];
                 // put created reviewObject in the reviewsArray
-                [reviews addObject:review1];
+                [reviews addObject:reviewObject];
+                
             }
             // save the "data"
             self.reviews = reviews;
             
             // reloadData after Downloading "data" main_queque which is the blockOfCode for getting data
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableView reloadData];
+            [self.collectionView reloadData];
             });
         }
     }];
-    
     // 3.All of the the different tasks from NSURLSession start in a suspended state. Start the task here.
     [reviewTask resume];
 }

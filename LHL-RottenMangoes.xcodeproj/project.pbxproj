@@ -16,6 +16,7 @@
 		96BBB2321CF69A8300D9D0EF /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BBB2311CF69A8300D9D0EF /* DetailedViewController.m */; };
 		96D1A84B1CF6283500CCD1E6 /* MovieCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D1A84A1CF6283500CCD1E6 /* MovieCollectionViewController.m */; };
 		96D1A84E1CF64FA400CCD1E6 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D1A84D1CF64FA400CCD1E6 /* CollectionViewCell.m */; };
+		96EFDBFC1CF7A73800979110 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EFDBFB1CF7A73800979110 /* Review.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		96D1A84A1CF6283500CCD1E6 /* MovieCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewController.m; sourceTree = "<group>"; };
 		96D1A84C1CF64FA400CCD1E6 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		96D1A84D1CF64FA400CCD1E6 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		96EFDBFA1CF7A73800979110 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		96EFDBFB1CF7A73800979110 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				96BBB2311CF69A8300D9D0EF /* DetailedViewController.m */,
 				96650D101CF517DF00E9E8DD /* Movie.h */,
 				96650D111CF517DF00E9E8DD /* Movie.m */,
+				96EFDBFA1CF7A73800979110 /* Review.h */,
+				96EFDBFB1CF7A73800979110 /* Review.m */,
 				96650CFF1CF4FCC700E9E8DD /* Main.storyboard */,
 				96650D021CF4FCC700E9E8DD /* Assets.xcassets */,
 				96650D041CF4FCC700E9E8DD /* LaunchScreen.storyboard */,
@@ -170,6 +175,7 @@
 				96650CFB1CF4FCC700E9E8DD /* AppDelegate.m in Sources */,
 				96650D121CF517DF00E9E8DD /* Movie.m in Sources */,
 				96BBB2321CF69A8300D9D0EF /* DetailedViewController.m in Sources */,
+				96EFDBFC1CF7A73800979110 /* Review.m in Sources */,
 				96650CF81CF4FCC700E9E8DD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

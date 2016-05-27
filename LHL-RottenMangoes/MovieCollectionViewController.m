@@ -8,6 +8,7 @@
 
 #import "MovieCollectionViewController.h"
 #import "CollectionViewCell.h"
+#import "DetailedViewController.h"
 #import "Movie.h"
 
 @interface MovieCollectionViewController ()
@@ -30,7 +31,7 @@ static NSString * const reuseIdentifier = @"Cell";
     NSURLSession *session = [NSURLSession sharedSession];
     
     // this blockOfCode keeps data, but nothing to do
-    //2. Create an NSURLSessionDataTask using the NSURLSession sharedSession. The data task is the object that does the work for you.
+    //2. We give it a URL where we should will get some data, it returns back a NSData (data from the web), which we can convert to JSON and then parse to how to want to display it.
     NSURLSessionTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         // if we don't get any error
@@ -39,12 +40,12 @@ static NSString * const reuseIdentifier = @"Cell";
             
             // json is a whole dictionary
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+            
             // inside the jsonDictionary there's moviesArray
             NSArray *moviesArray = json[@"movies"];
             
-            // Create new EmptyArrayMovies holds movie
+            // Create new EmptyArrayMovies holds movieObject
             NSMutableArray *movies = [NSMutableArray array];
-            
             
             // accessing moviesArray in movieDictionary to get Value of "title/synopsis/url"
             for (NSDictionary *movieDict in moviesArray) {
@@ -56,6 +57,9 @@ static NSString * const reuseIdentifier = @"Cell";
                 // set stringTitle to title in the movieObject
                 movie.title = movieDict[@"title"];
                 movie.synopsis = movieDict[@"synopsis"];
+                
+                // set the movie ID in the movieObject
+                movie.movieId = movieDict[@"id"];
                 
                 // set url to url in the movieObject
                 movie.url = movieDict[@"url"];
@@ -134,19 +138,19 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 
-//#pragma mark - Navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    
-//    // cell is sender
-//    //    SongItemCell *cell = (SongItemCell*) sender;
-//    NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
-//    //    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
-//    
-//    // set specific cell has specific data
-//    Movie *dataEachCell = [self.movies objectAtIndex:indexPath.item];
-//    self.movies.title = dataEachCell.title;
-//    self.movies = dataEachCell.year;
-//}
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    // cell is sender
+    //    SongItemCell *cell = (SongItemCell*) sender;
+    NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
+    //    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    
+    // set specific cell has specific data
+    Movie *selectedMovie = [self.movies objectAtIndex:indexPath.item];
+    DetailedViewController *destinationVC = segue.destinationViewController;
+    destinationVC.movie = selectedMovie;
+}
 
 
 

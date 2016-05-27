@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="1696" y="7"/>
         </scene>
-        <!--View Controller-->
+        <!--Detailed View Controller-->
         <scene sceneID="iGJ-gR-mXx">
             <objects>
-                <viewController id="xxS-FH-Mz7" sceneMemberID="viewController">
+                <viewController id="xxS-FH-Mz7" customClass="DetailedViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BPg-SM-T75"/>
                         <viewControllerLayoutGuide type="bottom" id="A69-c8-4XA"/>
@@ -113,6 +113,9 @@
                             <constraint firstItem="AoC-Dj-Jnr" firstAttribute="centerX" secondItem="3kW-ea-qyy" secondAttribute="centerX" id="pUG-BJ-4Vu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailLabel" destination="AoC-Dj-Jnr" id="xkg-aT-8Dp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMM-fD-gWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

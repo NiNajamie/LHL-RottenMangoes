@@ -19,7 +19,8 @@
 
 @property (nonatomic) NSString *movieId;
 
-@property (nonatomic) NSURL *reviewURL;
-@property (nonatomic) NSURL *review;
+// storing reviewObject to the reviewsArray
+@property (nonatomic) NSMutableArray *reviews;
+
 
 @end
