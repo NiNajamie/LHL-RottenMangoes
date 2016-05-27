@@ -11,8 +11,5 @@
 
 @interface Review : Movie
 
-// for detailedVC to display critic & quote
-@property (nonatomic) NSString *criticName;
-@property (nonatomic) NSString *quote;
 
 @end

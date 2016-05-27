@@ -19,8 +19,14 @@
 
 @property (nonatomic) NSString *movieId;
 
+// for detailedVC to display critic & quote
+@property (nonatomic) NSString *criticName;
+@property (nonatomic) NSString *quote;
+
 // storing reviewObject to the reviewsArray
 @property (nonatomic) NSMutableArray *reviews;
+
+
 
 
 @end

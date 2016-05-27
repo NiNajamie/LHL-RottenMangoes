@@ -96,25 +96,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="reviewLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoC-Dj-Jnr">
-                                <rect key="frame" x="90" y="361" width="420" height="219"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="420" id="f11-M5-6yK"/>
-                                    <constraint firstAttribute="height" constant="219" id="mLT-3l-xZo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoC-Dj-Jnr" customClass="detailLabel">
+                                <rect key="frame" x="50" y="136" width="500" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="reviewLabel3" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xc1-rq-3Nw">
+                                <rect key="frame" x="50" y="225.5" width="500" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="reviewLabel2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXx-ES-cgb">
+                                <rect key="frame" x="50" y="179" width="500" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="A69-c8-4XA" firstAttribute="top" secondItem="AoC-Dj-Jnr" secondAttribute="bottom" constant="20" id="Nu6-oD-huC"/>
-                            <constraint firstItem="AoC-Dj-Jnr" firstAttribute="centerX" secondItem="3kW-ea-qyy" secondAttribute="centerX" id="pUG-BJ-4Vu"/>
+                            <constraint firstItem="EXx-ES-cgb" firstAttribute="top" secondItem="AoC-Dj-Jnr" secondAttribute="bottom" constant="25" id="0el-SZ-N4g"/>
+                            <constraint firstItem="EXx-ES-cgb" firstAttribute="centerX" secondItem="3kW-ea-qyy" secondAttribute="centerX" id="0lN-gd-eXM"/>
+                            <constraint firstItem="AoC-Dj-Jnr" firstAttribute="leading" secondItem="3kW-ea-qyy" secondAttribute="leadingMargin" constant="30" id="FBe-Iw-eql"/>
+                            <constraint firstItem="EXx-ES-cgb" firstAttribute="leading" secondItem="3kW-ea-qyy" secondAttribute="leadingMargin" constant="30" id="LQf-ju-ZqJ"/>
+                            <constraint firstItem="Xc1-rq-3Nw" firstAttribute="centerX" secondItem="3kW-ea-qyy" secondAttribute="centerX" id="P2B-v3-Eja"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xc1-rq-3Nw" secondAttribute="trailing" constant="30" id="VO3-PX-Pei"/>
+                            <constraint firstItem="Xc1-rq-3Nw" firstAttribute="leading" secondItem="3kW-ea-qyy" secondAttribute="leadingMargin" constant="30" id="e4c-0A-0Zz"/>
+                            <constraint firstItem="AoC-Dj-Jnr" firstAttribute="top" secondItem="BPg-SM-T75" secondAttribute="bottom" constant="72" id="eiw-VU-s5m"/>
+                            <constraint firstItem="AoC-Dj-Jnr" firstAttribute="centerX" secondItem="3kW-ea-qyy" secondAttribute="centerX" id="jF9-tN-C3k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AoC-Dj-Jnr" secondAttribute="trailing" constant="30" id="jgG-eX-Ki4"/>
+                            <constraint firstItem="Xc1-rq-3Nw" firstAttribute="top" secondItem="EXx-ES-cgb" secondAttribute="bottom" constant="25" id="nNL-LY-pBn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EXx-ES-cgb" secondAttribute="trailing" constant="30" id="oNh-O8-hf4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="detailLabel" destination="AoC-Dj-Jnr" id="xkg-aT-8Dp"/>
+                        <outlet property="reviewLabel2" destination="EXx-ES-cgb" id="AgE-Zk-sVf"/>
+                        <outlet property="reviewLabel3" destination="Xc1-rq-3Nw" id="wtK-Qf-MGj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMM-fD-gWB" userLabel="First Responder" sceneMemberID="firstResponder"/>

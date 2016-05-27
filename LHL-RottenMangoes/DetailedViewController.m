@@ -14,6 +14,11 @@
 @interface DetailedViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reviewLabel2;
+@property (weak, nonatomic) IBOutlet UILabel *reviewLabel3;
+
+
+
 @property (nonatomic) NSMutableArray *reviews;
 
 @end
@@ -49,8 +54,6 @@
             
             // accessing reviewsArray in reviewJsonDictionary to get Value of "reviews"
             for (NSDictionary *reviewDict in reviewArray) {
-                // inside of the reviewsArray, there's dict
-                NSDictionary *dict = reviewDict[@"reviews"];
                 // create newEmpty Review object
                 Review *reviewObject = [[Review alloc] init];
                 
@@ -60,13 +63,17 @@
                 // put created reviewObject in the reviewsArray
                 [reviews addObject:reviewObject];
                 
+                // display criticName & quote in the console
+                NSLog(@"criticName:%@, quote: %@", reviewObject.criticName, reviewObject.quote);
+
             }
             // save the "data"
             self.reviews = reviews;
             
             // reloadData after Downloading "data" main_queque which is the blockOfCode for getting data
             dispatch_async(dispatch_get_main_queue(), ^{
-            [self.collectionView reloadData];
+//            [self.tableView reloadData];
+                [self updateLabels];
             });
         }
     }];
@@ -74,10 +81,27 @@
     [reviewTask resume];
 }
 
+// update each label with reviews
+- (void) updateLabels {
+    
+    Review *review1 = [self.reviews firstObject];
+//    review1.quote
+    self.detailLabel.text = review1.quote;
+    
+    Review *review2 = [self.reviews objectAtIndex:1];
+    self.reviewLabel2.text = review2.quote;
+    
+    Review *review3 = [self.reviews objectAtIndex:2];
+    self.reviewLabel3.text = review3.quote;
+
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation
